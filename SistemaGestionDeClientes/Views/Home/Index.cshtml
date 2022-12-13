@@ -6,11 +6,11 @@
     @if (Request.IsAuthenticated)
     {
         <h1>Hola @Common.CurrentUser.Get.Name</h1>
-        <p class="lead">Bienvenido!!! Menu para la Gestión de Clientes</p>
+        <p class="lead">Bienvenido!!!</p>
     }
     else
     {
-        <h1>Sistema de Gestión de Clientes</h1>
+        @*<h1>Sistema de Gestión de Clientes</h1>*@
         <p class="lead">Inicie Sesión para comenzar.</p>
         <p>
             <a href='@Url.Action("Login", "Account")' class="btn">Iniciar Sesión &raquo;</a>
@@ -18,11 +18,9 @@
     }
 </div>
 
-<div class="row" style="display:inline-flex; flex-wrap:nowrap">
+<div class="row" style="display:inline-flex; flex-wrap:nowrap; justify-content:center">
     @if (Request.IsAuthenticated)
     {
-   
-    
       <div class="col-md-4">
             <h2>Empleados</h2>
             <p>Gestionar Empleados</p>
@@ -31,11 +29,9 @@
     <div class="col-md-4">
                <h2>Usuarios</h2>
                <p>Creacion de Usuarios.</p>
-               <p><a class="btn btn-default" href='@Url.Action("Index", "")'>Crear Usuario &raquo;</a></p>
+               <p><a class="btn btn-default" href='@Url.Action("Register", "User")'>Crear Usuario &raquo;</a></p>
                <p>Visualización de Usuarios.</p>
-               <p><a class="btn btn-default" href='@Url.Action("Index", "")'>Visualizar Usuarios &raquo;</a></p>
-               <p>Eliminación de Usuarios.</p>
-               <p><a class="btn btn-default" href='@Url.Action("Index", "")'>Eliminar Usuario &raquo;</a></p>
+               <p><a class="btn btn-default" href='@Url.Action("Index", "User")'>Visualizar Usuarios &raquo;</a></p>
         </div>
     }
 </div>

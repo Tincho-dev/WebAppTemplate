@@ -1,0 +1,102 @@
+<!-- Falta agregador los botones en la columna acciones -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>🗒️ Mostrar Facturas</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html"
+          >Sistema de gestión de clientes</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin navbar -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="row my-2">
+            <div class="col-2">
+              <br />
+              <img
+                src="./img/factura.png"
+                class="d-block w-100"
+                alt="imagen crear cliente"
+                width="25"
+              />
+            </div>
+            <div class="col-8">
+              <br />
+              <h2 class="row my-2">Mostrar Factura</h2>
+              <div class="col-mb-7">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Id Cliente</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="123"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Id Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="123"
+                />
+              </div>
+              <a type="button" class="btn btn-outline-dark" href="">
+                🔍 Buscar
+              </a>
+              <br />
+              <br />
+              <div class="container">
+                <div class="row row-cols-10">
+                  <div class="col">Cliente</div>
+                  <div class="col">Nombre del proyecto</div>
+                  <div class="col">Acciones</div>
+                </div>
+              </div>
+              <br />
+              <hr />
+
+              <a type="button" class="btn btn-outline-dark" href="">
+                ⬅️ Volver
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
