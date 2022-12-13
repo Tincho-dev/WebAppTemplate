@@ -1,0 +1,36 @@
+﻿@model Model.ApplicationUser
+@{
+    List<Model.ApplicationRol> roles = ViewBag.Roles;
+}
+
+<h2>@Model.Name @Model.LastName</h2>
+ 
+<div class="form-group">
+    <label>Email</label>
+    <input class="form-control" type="text" readonly value="@Model.Email"  />
+</div>
+
+<hr />
+
+<h3 class="page-header">Roles</h3>
+
+@using (Html.BeginForm("AddRoleToUser", "User", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+    <div class="form-group">
+        <select name="role" class="form-control">
+            @foreach (var r in roles)
+            {
+                <option value="@r.Id">@r.Name</option>
+            }
+        </select>
+        <br />
+        <button type="submit" class="btn">
+            Agregar
+        </button>
+    </div>
+}
+
+<div>
+    <a class="btn" href="javascript:void(0);" onclick="history.go(-1);">Volver a la Lista</a>
+</div>

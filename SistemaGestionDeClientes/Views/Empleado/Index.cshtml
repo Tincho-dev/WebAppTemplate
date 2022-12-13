@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Model.Custom.EmpleadoGrid>
+
+    @{
+    ViewBag.Title = "Empleado";
+    }
+
+    <h2>Empleados</h2>
+
+    <p>
+        @Html.ActionLink("Crear Nuevo", "Create", "Empleado", new { @class = "btn" })
+    </p>
+
+
+    @using (Html.BeginForm("Buscar", "Empleado", FormMethod.Get))
+    {
+        <p>
+          Nombre: <i style="color:black;">@Html.TextBox("palabra")</i>
+          <input class="filtrar" type="submit" value="Filtrar" />
+        </p>
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApyNom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LegajoEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApyNom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LegajoEmpleado)
+        </td>
+        <td>
+            @Html.ActionLink(@item.DNI.ToString(), "Get", new { id = item.LegajoEmpleado}, new{ @class = "MiEstilo"})
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.FechNacimiento)*@
+            @item.FechaNacimiento.ToString("dd/MM/yyyy")
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario)
+        </td>
+        <td class="botones">
+            @Html.ActionLink("Editar", "Edit", new { id = item.LegajoEmpleado }, new { @class = "btn" })
+            @Html.ActionLink("Detalles", "Details", new { id = item.LegajoEmpleado }, new { @class = "btn" })
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.LegajoEmpleado }, new { @class = "btn" })
+        </td>
+    </tr>
+}
+
+    </table>
+
+    <div>
+        @Html.ActionLink("Volver al Inicio", "Index", "Home", null , new{ @class = "btn" } )
+    </div>

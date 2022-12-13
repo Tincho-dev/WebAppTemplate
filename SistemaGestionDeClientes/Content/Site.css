@@ -1,0 +1,101 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #264653;
+    align-content: center;
+    color: #f1faee;
+    display: flex;
+    flex-direction:column;
+}
+
+.MiEstilo {
+    color: #264653;
+    text-decoration: underline;
+}
+
+
+.botones{
+    display:flex;
+    align-items:center;
+    border-top:0;
+}
+
+tr {
+    background-color: white;
+    color: #219ebc;
+    text-align: center;
+}
+
+th {
+    background-color: #219ebc;
+    color: white;
+    text-align: center;
+}
+
+
+.jumbotron{
+    color: #191818;
+}
+.col-md-4 {
+    background-color: #264653;
+    text-align:center;
+}
+.row{
+    margin-right:30px;
+    margin-left:30px;
+}
+
+.btn {
+    background-color: #219ebc;
+    color: white;
+}
+
+.filtrar{
+    background-color: #219ebc;
+    color: #191818;
+    border: none;
+}
+
+.filtrar:hover{
+    background-color: #f1faee;
+}
+
+.btn-default {
+    background-color: #219ebc;
+}
+
+.btn-success {
+    background-color: #219ebc;
+    border-color: #023047;
+}
+
+.btn:hover, btn:focus {
+    background-color: #f1faee;
+    color: black;
+    border-color: #023047;
+}
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.footer{
+    margin-top:auto;
+
+}
+

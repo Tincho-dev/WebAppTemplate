@@ -1,0 +1,33 @@
+﻿@model Model.Domain.RolEmp
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar Rol</h2>
+
+<h3>Estas seguro que quieres eliminar este Rol?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn" />
+        <a class="btn" href="javascript:void(0);" onclick="history.go(-1);">Volver a la Lista</a>
+    </div>
+    }
+</div>

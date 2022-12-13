@@ -1,0 +1,47 @@
+﻿@model Model.Domain.Empleado
+@{
+    List<Model.Custom.UserGrid> users = ViewBag.Usuario;
+}
+
+<h2>@Model.Nombre @Model.Apellido</h2>
+
+<div class="form-group">
+    <label>Legajo</label>
+    <input class="form-control" type="text" readonly value="@Model.Legajo" />
+    <label>DNI</label>
+    <input class="form-control" type="text" readonly value="@Model.DNI" />
+    <label>Fecha de Nacimiento</label>
+    <input class="form-control" type="text" readonly value="@Model.FechaNacimiento.ToShortDateString()" />
+</div>
+
+<hr />
+
+<h3 class="page-header">Usuario</h3>
+
+@using (Html.BeginForm("AddUserToEmp", "Empleado", FormMethod.Post))
+{
+@Html.HiddenFor(x => x.Legajo)
+<div class="form-group">
+    <select name="user" class="form-control">
+        @foreach (var u in users)
+            {
+        <option value="@u.Id">@u.Email</option>
+            }
+    </select>
+    <br />
+    <button type="submit" class="btn">
+        Agregar
+    </button>
+
+</div>
+}
+
+<hr />
+<div class="form-group">
+    <a class="btn" href="javascript:void(0);" onclick="history.go(-1);">Volver a la Lista</a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Model.Custom.UserGrid>
+
+    @{
+    ViewBag.Title = "Usuarios";
+    }
+
+    <h2>Usuarios</h2>
+
+    <p>
+        @Html.ActionLink("Crear Nuevo", "Register", "User", new { @class = "btn btn-success" })
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Role)
+                </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>*@
+            <td class="botones">
+                @Html.ActionLink("Detalle", "Details", new { id = item.Id }, new { @class = "btn" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn" })
+            </td>
+        </tr>
+    }
+
+    </table>
+    <div>
+        @Html.ActionLink("Volver al Inicio", "Index", "Home", null , new{ @class = "btn" } )
+    </div>

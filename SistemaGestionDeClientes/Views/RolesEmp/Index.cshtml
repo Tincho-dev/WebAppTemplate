@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Model.Domain.RolEmp>
+
+    @{
+    ViewBag.Title = "Roles";
+    }
+
+    <h2>Roles</h2>
+
+    <p>
+        @Html.ActionLink("Crear Nuevo", "Create", "RolesEmp", new { @class = "btn" })
+  
+    </p>
+
+    <p>
+        @using (Html.BeginForm("Buscar", "RolesEmp", FormMethod.Get))
+    {
+    <p>
+        Nombre: <i style="color:black;">@Html.TextBox("palabra")</i>
+        <input class="filtrar" type="submit" value="Filtrar" />
+    </p>
+    }
+        </p>
+
+        <table class="table" style="width:50%;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td class="botones">
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id_Rol }, new { @class = "btn" })
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Id_Rol }, new { @class = "btn" })
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Rol }, new { @class = "btn" })
+                </td>
+            </tr>
+        }
+
+        </table>
+        <div>
+            @Html.ActionLink("Volver al Inicio", "Index", "Home", null , new{ @class = "btn" } )
+        </div>
