@@ -10,11 +10,11 @@ namespace Persistanse
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ApplicationRol> ApplicationRole { get; set; }
         public DbSet<ApplicationUserRole> ApplicationUserRoles { get; set; }
-        
+
         public DbSet<RolEmp> RolEmpleado { get; set; }
         public DbSet<Empleado> Empleado { get; set; }
         public DbSet<UserPorEmp> UserPorEmp { get; set; }
-        
+
 
         public ApplicationDbContext()
             : base("DefaultConnection")
