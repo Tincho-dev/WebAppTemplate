@@ -11,7 +11,7 @@ namespace Services
     public class EmpleadoServices
     {
         private readonly UserService userService = new UserService();
-            
+
         public IEnumerable<EmpleadoGrid> GetAll()
         {
             var result = new List<EmpleadoGrid>();
@@ -189,6 +189,6 @@ namespace Services
 
             return empleado;
         }
-             
+
     }
 }

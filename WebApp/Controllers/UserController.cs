@@ -2,7 +2,6 @@
 using Model;
 using Services;
 using Services.Auth;
-using WebApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +9,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WebApp.Models;
 
 namespace WebApp.Controllers
 {

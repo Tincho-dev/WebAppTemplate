@@ -13,6 +13,6 @@ namespace Model.Domain
         public string Nombre { get; set; }
         [Display(Name = "Descripcion del Rol")]
         [DataType(DataType.MultilineText)]
-        public  string Descripcion { get; set; }
+        public string Descripcion { get; set; }
     }
 }

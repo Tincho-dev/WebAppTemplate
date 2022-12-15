@@ -3,11 +3,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Model;
 using Services.Auth;
-using WebApp.Models;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WebApp.Models;
 
 namespace WebApp.Controllers
 {
@@ -165,7 +165,7 @@ namespace WebApp.Controllers
                 //Autenticacion
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
 
                     return RedirectToAction("Login", "Account");
