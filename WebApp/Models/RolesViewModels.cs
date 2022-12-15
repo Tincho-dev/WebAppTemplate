@@ -1,4 +1,4 @@
-﻿namespace SistemaGestionDeClientes.Models
+﻿namespace WebApp.Models
 {
     public class RolesViewModels
     {

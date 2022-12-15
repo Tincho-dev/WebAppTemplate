@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace SistemaGestionDeClientes
+namespace WebApp
 {
     public class BundleConfig
     {

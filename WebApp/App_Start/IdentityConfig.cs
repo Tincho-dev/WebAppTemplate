@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 
-namespace SistemaGestionDeClientes
+namespace WebApp
 {
     public class EmailService : IIdentityMessageService
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SistemaGestionDeClientes
+namespace WebApp
 {
     public class FilterConfig
     {

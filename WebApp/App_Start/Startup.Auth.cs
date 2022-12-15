@@ -8,7 +8,7 @@ using Persistanse;
 using Services.Auth;
 using System;
 
-namespace SistemaGestionDeClientes
+namespace WebApp
 {
     public partial class Startup
     {
