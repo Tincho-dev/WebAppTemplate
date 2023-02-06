@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\202212131627416_initial.cs" />
-    <Compile Include="Migrations\202212131627416_initial.Designer.cs">
-      <DependentUpon>202212131627416_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202302052357544_Cediad-Entropia.cs" />
+    <Compile Include="Migrations\202302052357544_Cediad-Entropia.Designer.cs">
+      <DependentUpon>202302052357544_Cediad-Entropia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212131627416_initial.resx">
-      <DependentUpon>202212131627416_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302052357544_Cediad-Entropia.resx">
+      <DependentUpon>202302052357544_Cediad-Entropia.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

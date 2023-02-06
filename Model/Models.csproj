@@ -62,11 +62,8 @@
     <Compile Include="Auth\ApplicationUser.cs" />
     <Compile Include="Custom\EmpleadoGrid.cs" />
     <Compile Include="Custom\UserGrid.cs" />
-    <Compile Include="Domain\Empresa\Empleado.cs" />
-    <Compile Include="Domain\Empresa\Historial_Roles.cs" />
-    <Compile Include="Domain\Empresa\Usuario.cs" />
-    <Compile Include="Domain\Empresa\RolEmp.cs" />
-    <Compile Include="Domain\Empresa\UserPorEmp.cs" />
+    <Compile Include="Domain\Fuente.cs" />
+    <Compile Include="Domain\Letra.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

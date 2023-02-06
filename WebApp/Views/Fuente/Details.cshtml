@@ -1,0 +1,58 @@
+﻿@model Models.Fuente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fuente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.N)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaFuente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaFuente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntropiaMaxima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntropiaMaxima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaCodificada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaCodificada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntropiaDeLaFuente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntropiaDeLaFuente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFuente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

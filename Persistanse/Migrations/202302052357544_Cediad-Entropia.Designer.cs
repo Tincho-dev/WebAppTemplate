@@ -7,13 +7,13 @@ namespace Persistanse.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class initial : IMigrationMetadata
+    public sealed partial class CediadEntropia : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CediadEntropia));
         
         string IMigrationMetadata.Id
         {
-            get { return "202212131627416_initial"; }
+            get { return "202302052357544_Cediad-Entropia"; }
         }
         
         string IMigrationMetadata.Source
